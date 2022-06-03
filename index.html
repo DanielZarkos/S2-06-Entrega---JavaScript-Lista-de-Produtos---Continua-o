@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Lista de Produtos</title>
+</head>
+
+<body>
+    <div class="containerTotal">
+
+        <!-- CABEÇALHO -->
+        <header class="top--header">
+            <div id="filters" class="filtersContainer">
+
+                <button onclick="searchByTag('Todos')" class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos"
+                    id="scrTodos">Todos</button>
+                <button onclick="searchByTag('Hortifruti')"
+                    class="estiloGeralBotoes estiloGeralBotoes--filtrar">Hortifruti</button>
+                <button onclick="searchByTag('Panificadora')"
+                    class="estiloGeralBotoes estiloGeralBotoes--filtrar">Pafinicadora</button>
+                <button onclick="searchByTag('Laticínios')"
+                    class="estiloGeralBotoes estiloGeralBotoes--filtrar">Laticínios</button>
+            </div>
+
+            <div class="containerBuscaPorNome">
+                <input type="text" placeholder="Pesquisar por" class="campoBuscaPorNome" id="searchInput" value="">
+                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome" id="searchButton"><svg width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.70833 15.0417C12.2061 15.0417 15.0417 12.2061 15.0417 8.70833C15.0417 5.21053 12.2061 2.375 8.70833 2.375C5.21053 2.375 2.375 5.21053 2.375 8.70833C2.375 12.2061 5.21053 15.0417 8.70833 15.0417Z"
+                            stroke="white" stroke-width="1.58333" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.625 16.625L13.1813 13.1812" stroke="white" stroke-width="1.58333"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+        </header>
+
+        <main class="produtos--main--all">
+
+
+            <div class="containerListaProdutos">
+                <ul id="listProdutos">
+
+                </ul>
+            </div>
+
+            <div class="boxCart">
+            <h2 class="btnCompras"> <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.8125 8C12.0703 8 12.3047 7.83594 12.375 7.57812L13.4766 2.70312C13.5469 2.35156 13.2891 2 12.9141 2H3.72656L3.51562 0.96875C3.44531 0.710938 3.21094 0.5 2.95312 0.5H0.5625C0.234375 0.5 0 0.757812 0 1.0625V1.4375C0 1.76562 0.234375 2 0.5625 2H2.17969L3.84375 10.0625C3.42188 10.2969 3.14062 10.7422 3.1875 11.2812C3.21094 11.9375 3.75 12.4766 4.42969 12.5C5.17969 12.5469 5.8125 11.9375 5.8125 11.1875C5.8125 10.8359 5.64844 10.5078 5.41406 10.25H10.3125C10.0781 10.5078 9.91406 10.8594 9.9375 11.2344C9.9375 11.9375 10.5234 12.5 11.2266 12.5C11.9531 12.5234 12.5625 11.9375 12.5625 11.1875C12.5625 10.6719 12.2578 10.2266 11.8125 10.0156L11.9297 9.45312C12.0234 9.10156 11.7422 8.75 11.3906 8.75H5.10938L4.94531 8H11.8125ZM9.44531 5C9.67969 5 9.82031 5.30469 9.63281 5.49219L8.0625 7.0625C7.94531 7.17969 7.78125 7.17969 7.66406 7.0625L6.09375 5.49219C5.90625 5.30469 6.04688 5 6.28125 5H7.3125V3.59375C7.3125 3.45312 7.42969 3.3125 7.59375 3.3125H8.15625C8.29688 3.3125 8.4375 3.45312 8.4375 3.59375V5H9.44531Z"
+                        fill="#F1F3F5" />
+                </svg> Carrinho
+            </h2>
+
+            
+
+
+
+
+                <div id="cartItems">
+                    <ul id="columnItems">
+
+                        <li id="emptyCart">
+                            <svg width="40" height="44" viewBox="0 0 40 44" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8 2L2 10V38C2 39.0609 2.42143 40.0783 3.17157 40.8284C3.92172 41.5786 4.93913 42 6 42H34C35.0609 42 36.0783 41.5786 36.8284 40.8284C37.5786 40.0783 38 39.0609 38 38V10L32 2H8Z"
+                                    stroke="#868E96" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 10H38" stroke="#868E96" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M28.0003 18.0001C28.0003 20.1218 27.1574 22.1566 25.6572 23.6569C24.1569 25.1572 22.122 26.0001 20.0003 26.0001C17.8786 26.0001 15.8437 25.1572 14.3435 23.6569C12.8432 22.1566 12.0003 20.1218 12.0003 18.0001"
+                                    stroke="#868E96" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>
+                                Seu carrinho está vazio.
+                            </p>
+                        </li>
+
+                    </ul>
+
+
+
+
+
+                    <div class="blockContainer">
+                        <div>
+                            <p>Quantidade: </p> <!-- array.length +1-->
+                            <p>Total: </p> <!-- += preços -->
+                        </div>
+                        <br>
+                        <div>
+                            <p class="right" id="amount">0</p> <!-- += preços -->
+                            <p class="right" id="totalPrice">R$ 0,00 </p> <!-- += preços -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="src/js/dataProdutos.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
