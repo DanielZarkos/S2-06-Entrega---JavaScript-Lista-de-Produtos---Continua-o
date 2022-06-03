@@ -2,7 +2,7 @@ const produtos = [
     {
         id: 1,
         nome: 'Banana',
-        preco: 2.00,
+        preco: 3.25,
         secao: 'Hortifruti',
         categoria: 'fruta',
         img: "./src/img/banana.png",
@@ -18,7 +18,7 @@ const produtos = [
     {
         id: 2,
         nome: 'Morango',
-        preco: 2.00,
+        preco: 7.30,
         secao: 'Hortifruti',
         categoria: 'fruta',
         img: './src/img/morango.png',
@@ -34,7 +34,7 @@ const produtos = [
     {
         id: 3,
         nome: 'Maçã',
-        preco: 2.00,
+        preco: 6.00,
         secao: 'Hortifruti',
         categoria: 'fruta',
         img: './src/img/maca.png',
@@ -78,5 +78,34 @@ const produtos = [
             'Gorduras totais'
         ] 
     },
-    
+    {
+        id: 6,
+        nome: 'Iogurte',
+        preco: 6.75,
+        secao: 'Laticínios',
+        categoria: 'Iogurte',
+        img: 'https://www.itambe.com.br/portal/Images/Produto/3ditambebandejamorango540gpersp_full.png',
+        promocao: false,
+        precoPromocao: 1.00,
+        componentes: [
+            'Carboidratos',
+            'Proteínas',
+            'Gorduras totais'
+        ] 
+    },
+    {
+        id: 7,
+        nome: 'Bolo de Cenoura',
+        preco: 8.30,
+        secao: 'Panificadora',
+        categoria: 'Bolo',
+        img: 'https://imagem.band.com.br/novahome/055caa6d-7528-44bc-ac32-3add84bdc0b0.jpg',
+        promocao: false,
+        precoPromocao: 1.00,
+        componentes: [
+            'Carboidratos',
+            'Proteínas',
+            'Gorduras totais'
+        ] 
+    },    
 ]
