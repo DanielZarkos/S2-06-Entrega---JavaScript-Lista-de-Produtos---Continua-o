@@ -156,8 +156,6 @@ main {}
     align-self: center;
 }
 
-.containerPrecoTotal p {}
-
 .buyBar {
     height: 20px;
     line-height: 20px;
@@ -255,6 +253,12 @@ main {}
     display: flex;
     justify-content: space-between;
     margin: 0 8px;
+    background-color: #12B886;
+    border-radius: 0 0 7px 7px;
+    color: #f1f1f1;
+    font-weight: 540;
+    margin-top: 5px;
+    padding: 5px;
 }
 
 .blockContainer > p {
@@ -271,7 +275,7 @@ main {}
 }
 
 #columnItems{
-    overflow: auto;
+    overflow: auto;    
 }
 
 @media screen and (max-width:320px) {
@@ -384,23 +388,15 @@ main {}
 
     .produtos--main--all{
         display: flex;
-        width: 780px;
+        width: 97%;
 
     }
 
     #listProdutos {
         display: flex;
-        overflow: hidden;        
+        overflow: hidden;
         flex-wrap: wrap;
-        min-width: 778px;
-    }
-
-    .boxCart{
-        display: flex;
-        text-align: center;
-        width: 300px;
-        min-height: 100px;
-        align-items: center;
+        min-width: 90%;
     }
 
     .containerListaProdutos>ul>li {
@@ -412,7 +408,7 @@ main {}
         transition: ease-in-out .1s;
         height: 45vh;
         outline: auto;
-        min-width: 236px;        
+        min-width: 22%;        
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -430,11 +426,25 @@ main {}
     }
 
 
+    .boxCart {
+    display: flex;
+    text-align: center;
+    width: 290px;    
+    flex-direction: column;
+    list-style: none;
+    text-align: center;    
+    align-items: unset;
+    justify-content: unset;    
+    text-align: center;
+    width: 300px;
+    min-height: 100px;    
+    }
 
-
-
-
-
+    #emptyCart{
+        all: unset;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 
 }
 
